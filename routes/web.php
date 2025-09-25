@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PendaftaranController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PendaftaranController::class, 'index']);
+Route::get('/pendaftaran', [PendaftaranController::class, 'create'])->name('pendaftaran.create');
+Route::post('/pendaftaran', [PendaftaranController::class, 'store'])->name('pendaftaran.store');
