@@ -6,10 +6,21 @@
   <title>Sanggar Tari Mahera</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
+    /* HEADER */
     .navbar-mahera {
-        background-color: #fff;
+        background-color: rgba(255,255,255,0.95);
         border-bottom: 2px solid #ff69b4;
+        position: fixed;      /* sticky header */
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        backdrop-filter: blur(6px); /* efek elegan */
     }
+    body {
+        padding-top: 80px; /* biar konten ga ketiban header */
+    }
+
     .navbar-nav .nav-link {
         font-weight: 500;
         color: #333 !important;
@@ -29,7 +40,18 @@
         background-color: #b02a6f;
         color: #fff !important;
     }
-    
+
+    /* Background motif halus */
+    .motif-bg {
+        background-color:#fff0f5;
+        background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png'); /* tekstur halus */
+        background-repeat: repeat;
+    }
+
+    /* Judul & section */
+    h1, h2 {
+        color: #b02a6f;
+    }
   </style>
 </head>
 <body>
@@ -50,6 +72,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="#sejarah">Sejarah</a></li>
+        <li class="nav-item"><a class="nav-link" href="#informasi">Informasi</a></li>
         <li class="nav-item"><a class="nav-link" href="#jadwal">Jadwal Latihan</a></li>
         <li class="nav-item"><a class="nav-link" href="#prestasi">Prestasi</a></li>
         <li class="nav-item"><a class="nav-link" href="#kegiatan">Kegiatan</a></li>
@@ -57,15 +80,14 @@
 
       <!-- Tombol Daftar/Login -->
       <div class="ms-3">
-        <a href="{{ route('pendaftaran.create') }}" class="btn btn-auth">Daftar / Login</a>
+        <a href="{{ route('pendaftaran.create') }}" class="btn btn-auth">Daftar</a>
       </div>
     </div>
   </div>
 </nav>
 
-<!-- Konten lainnya nanti di sini -->
- <!-- Company Profile -->
-<div class="container-fluid py-5" style="background-color:#fff0f5;">
+<!-- Company Profile -->
+<div class="container-fluid py-5 motif-bg">
   <div class="container">
     <div class="text-center mb-5">
         <h1 class="fw-bold">Sanggar Tari Mahera</h1>
@@ -104,3 +126,6 @@
   </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
