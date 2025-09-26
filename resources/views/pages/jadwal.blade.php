@@ -1,60 +1,57 @@
 @extends('layouts.app')
 
-@section('title', 'Jadwal Latihan Sanggar Tari Mahera')
-
 @section('content')
-<div class="container py-5">
-    <h1 class="mb-4 text-center fw-bold text-primary">Jadwal Latihan Sanggar Tari Mahera</h1>
+<div class="container-fluid py-5" style="background-color:#fff0f5;"> 
+    <div class="container">
+        <h1 class="fw-bold text-center mb-4">Jadwal Latihan</h1>
 
-    <p class="lead text-center mb-5">
-        Berikut adalah jadwal latihan rutin Sanggar Tari Mahera.
-        Jadwal dapat berubah sewaktu-waktu sesuai kebutuhan pertunjukan atau lomba.
-    </p>
+        <p class="text-center mb-5">
+            Berikut adalah jadwal latihan rutin Sanggar Tari Mahera. Jadwal dapat berubah sewaktu-waktu 
+            sesuai kebutuhan pertunjukan atau lomba. Pastikan untuk selalu mengecek update terbaru.
+        </p>
 
-    <!-- Jadwal Latihan -->
-    <div class="table-responsive shadow-sm">
-        <table class="table table-bordered table-striped align-middle text-center">
-            <thead class="table-pink" style="background-color:#f8d7da;">
-                <tr>
-                    <th>Hari</th>
-                    <th>Waktu</th>
-                    <th>Kelompok</th>
-                    <th>Tempat</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Senin</td>
-                    <td>16.00 - 18.00</td>
-                    <td>Kelompok Anak-anak</td>
-                    <td>Studio Utama Mahera</td>
-                </tr>
-                <tr>
-                    <td>Rabu</td>
-                    <td>16.00 - 18.30</td>
-                    <td>Kelompok Remaja</td>
-                    <td>Studio Utama Mahera</td>
-                </tr>
-                <tr>
-                    <td>Jumat</td>
-                    <td>16.00 - 18.30</td>
-                    <td>Kelompok Dewasa</td>
-                    <td>Balai Desa Karangtengah</td>
-                </tr>
-                <tr>
-                    <td>Minggu</td>
-                    <td>08.00 - 11.00</td>
-                    <td>Latihan Gabungan (Semua Anggota)</td>
-                    <td>Studio Utama Mahera</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+        <!-- Jadwal Latihan Table -->
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped bg-white shadow">
+                <thead class="table-danger">
+                    <tr>
+                        <th>Hari</th>
+                        <th>Waktu</th>
+                        <th>Tingkat</th>
+                        <th>Keterangan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sabtu</td>
+                        <td>15.00 - 17.00</td>
+                        <td>Pemula</td>
+                        <td>Latihan dasar gerak tari dan pemanasan.</td>
+                    </tr>
+                    <tr>
+                        <td>Sabtu</td>
+                        <td>17.00 - 19.00</td>
+                        <td>Menengah</td>
+                        <td>Latihan koreografi dasar dan improvisasi.</td>
+                    </tr>
+                    <tr>
+                        <td>Minggu</td>
+                        <td>15.00 - 17.00</td>
+                        <td>Lanjutan</td>
+                        <td>Latihan koreografi lomba & pertunjukan khusus.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-    <div class="alert alert-info mt-4">
-        <strong>Catatan:</strong> Jadwal dapat berubah apabila ada acara
-        pentas, lomba, atau kegiatan khusus. Untuk informasi terbaru,
-        silakan hubungi pengurus sanggar.
+         <!-- Tombol daftar -->
+        <div class="text-center mt-5">
+            <a href="{{ route('pendaftaran.create') }}" 
+               class="btn btn-lg px-4"
+               style="background-color:#d63384; color:white; border-radius:30px; font-weight:bold;">
+               Daftar Sekarang
+            </a>
+        </div>
     </div>
 </div>
 @endsection

@@ -1,47 +1,73 @@
 @extends('layouts.app')
 
-@section('title', 'Kegiatan Sanggar Tari Mahera')
-
 @section('content')
-<div class="container mx-auto py-10 px-4">
-    <h1 class="text-3xl font-bold mb-8 text-center">Kegiatan Latihan & Pertunjukan</h1>
+<div class="container-fluid py-5" style="background-color:#fff0f5;"> 
+    <div class="container">
+        <h1 class="fw-bold text-center mb-4">Kegiatan Sanggar Tari Mahera</h1>
 
-    <!-- GRID 3 KOTAK PER BARIS -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <p class="text-center mb-5">
+            Sanggar Tari Mahera aktif mengadakan berbagai kegiatan untuk mendukung pelestarian budaya, 
+            mengembangkan kreativitas, dan mempererat kebersamaan antar anggota.
+        </p>
 
-        <!-- CARD 1 -->
-        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 p-5 text-center">
-            <h2 class="text-lg font-semibold text-gray-800 mb-2">Latihan Rutin Mingguan</h2>
-            <img src="{{ asset('images/kegiatan/latihan1.jpg') }}"
-                 alt="Latihan Mingguan"
-                 class="w-full h-40 object-cover rounded-lg mb-4">
-            <p class="text-gray-600 text-sm">
-                Latihan rutin setiap Sabtu sore untuk mempersiapkan pertunjukan dan meningkatkan teknik tari anggota.
-            </p>
+        <!-- Daftar Kegiatan -->
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card shadow border-0 h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-pink fw-bold">Latihan Rutin</h5>
+                        <p class="card-text">
+                            Latihan rutin setiap akhir pekan untuk meningkatkan kemampuan teknik tari 
+                            dan mempersiapkan anggota untuk pertunjukan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card shadow border-0 h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-pink fw-bold">Workshop & Pelatihan</h5>
+                        <p class="card-text">
+                            Kegiatan belajar bersama pelatih tamu dari berbagai daerah untuk memperluas wawasan 
+                            dan menambah pengalaman anggota.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card shadow border-0 h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-pink fw-bold">Pertunjukan Tari</h5>
+                        <p class="card-text">
+                            Partisipasi dalam acara seni, pameran budaya, dan pentas lokal hingga nasional 
+                            sebagai sarana memperkenalkan karya tari Mahera.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card shadow border-0 h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-pink fw-bold">Lomba & Kompetisi</h5>
+                        <p class="card-text">
+                            Mengikuti berbagai lomba tari untuk mengasah kemampuan dan mengharumkan nama sanggar.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <!-- CARD 2 -->
-        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 p-5 text-center">
-            <h2 class="text-lg font-semibold text-gray-800 mb-2">Persiapan Festival Tari</h2>
-            <img src="{{ asset('images/kegiatan/latihan2.jpg') }}"
-                 alt="Persiapan Festival"
-                 class="w-full h-40 object-cover rounded-lg mb-4">
-            <p class="text-gray-600 text-sm">
-                Sesi latihan khusus menjelang lomba Festival Tari Nusantara, fokus pada kostum dan koreografi.
-            </p>
+        <!-- Tombol daftar -->
+        <div class="text-center mt-5">
+            <a href="{{ route('pendaftaran.create') }}" 
+               class="btn btn-lg px-4"
+               style="background-color:#d63384; color:white; border-radius:30px; font-weight:bold;">
+               Daftar Sekarang
+            </a>
         </div>
-
-        <!-- CARD 3 -->
-        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 p-5 text-center">
-            <h2 class="text-lg font-semibold text-gray-800 mb-2">Pertunjukan di Acara Daerah</h2>
-            <img src="{{ asset('images/kegiatan/pertunjukan1.jpg') }}"
-                 alt="Pertunjukan Daerah"
-                 class="w-full h-40 object-cover rounded-lg mb-4">
-            <p class="text-gray-600 text-sm">
-                Penampilan spesial dalam acara Hari Jadi Kabupaten, menampilkan tarian khas Banjarnegara.
-            </p>
-        </div>
-
     </div>
 </div>
 @endsection
