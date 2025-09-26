@@ -61,7 +61,7 @@
   <div class="container">
     <!-- Logo -->
     <a class="navbar-brand d-flex align-items-center" href="/">
-      <img src="{{ asset('images/logo-mahera.jpg') }}" alt="Logo Mahera" style="height:40px; margin-right:10px;">
+      <img src="{{ asset('images/logo-mahera.png') }}" alt="Logo Mahera" style="height:40px; margin-right:10px;">
       <span class="fw-bold text-dark">Sanggar Tari Mahera</span>
     </a>
 
@@ -71,11 +71,12 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#sejarah">Sejarah</a></li>
-        <li class="nav-item"><a class="nav-link" href="#informasi">Informasi</a></li>
-        <li class="nav-item"><a class="nav-link" href="#jadwal">Jadwal Latihan</a></li>
-        <li class="nav-item"><a class="nav-link" href="#prestasi">Prestasi</a></li>
-        <li class="nav-item"><a class="nav-link" href="#kegiatan">Kegiatan</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ route('sejarah') }}">Sejarah</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ route('informasi') }}">Informasi</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ route('jadwal') }}">Jadwal Latihan</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ route('prestasi') }}">Prestasi</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ route('kegiatan') }}">Kegiatan</a></li>
+
       </ul>
 
       <!-- Tombol Daftar/Login -->
