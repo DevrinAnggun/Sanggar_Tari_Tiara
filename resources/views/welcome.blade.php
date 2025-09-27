@@ -102,6 +102,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="{{ route('beranda') }}">Beranda</a></li>
         <li class="nav-item"><a class="nav-link" href="{{ route('sejarah') }}">Sejarah</a></li>
         <li class="nav-item"><a class="nav-link" href="{{ route('informasi') }}">Informasi</a></li>
         <li class="nav-item"><a class="nav-link" href="{{ route('jadwal') }}">Jadwal Latihan</a></li>
@@ -312,8 +313,13 @@
       </div>
     </div>
 
+<!-- 🌸 MAIN CONTENT -->
+    <main class="flex-grow-1">
+        @yield('content')
+    </main>
+
 <!-- Credit -->
-<div class="container-fluid text-center mt-4 pt-3" style="background-color:#ff69b4; color:white; padding: 10px 0; margin:0;">
+<div class="container-fluid text-center mt-4 pt-3" style="background-color:#d63384; color:white; padding: 10px 0; margin:0;">
   <p class="mb-0 small fw-bold">Design by Devrin Anggun Saputri &copy; 2025</p>
 </div>
 </footer>

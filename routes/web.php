@@ -11,6 +11,10 @@ Route::view('/', 'welcome')->name('home');
 Route::get('/pendaftaran', [PendaftaranController::class, 'create'])->name('pendaftaran.create');
 Route::post('/pendaftaran', [PendaftaranController::class, 'store'])->name('pendaftaran.store');
 
+Route::get('/', function () {
+    return view('welcome'); // otomatis buka welcome.blade.php
+})->name('beranda');
+
 // ✅ Halaman lain
 Route::get('/sejarah', [PageController::class, 'sejarah'])->name('sejarah');
 Route::get('/informasi', [PageController::class, 'informasi'])->name('informasi');

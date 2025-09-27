@@ -29,15 +29,4 @@
         <p class="text-center">
             Prestasi ini menjadi motivasi kami untuk terus berkarya dan melestarikan seni tari bagi generasi mendatang.
         </p>
-
-        <!-- Tombol daftar -->
-        <div class="text-center mt-5">
-            <a href="{{ route('pendaftaran.create') }}" 
-               class="btn btn-lg px-4"
-               style="background-color:#d63384; color:white; border-radius:30px; font-weight:bold;">
-               Daftar Sekarang
-            </a>
-        </div>
-    </div>
-</div>
 @endsection
